@@ -15,6 +15,15 @@ class MoviesViewController: UITableViewController {
         super.viewDidLoad()
         loadMovies()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc = segue.destination as? ViewController, let selectedIndexPath = tableView.indexPathForSelectedRow {
+            let movie = movies[selectedIndexPath.row]
+            
+            vc.movie = movie
+        }
+    }
 
     // MARK: - Table view data source
     func loadMovies() {

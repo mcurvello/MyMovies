@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qaP-V2-Uo5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WH0-D4-pgS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -68,6 +68,7 @@
                                     <outlet property="ivMovie" destination="Y3F-rH-att" id="9cd-4T-Uzp"/>
                                     <outlet property="lbSummary" destination="fLZ-fs-1Cz" id="t95-dB-35f"/>
                                     <outlet property="lbTitle" destination="5Ue-5P-WOq" id="urp-5x-pXa"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="cellToDetail" id="wYJ-oi-cIw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,10 +77,11 @@
                             <outlet property="delegate" destination="qaP-V2-Uo5" id="Tym-rb-2rJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="iUQ-dE-e8M"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57V-UD-Qnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746.37681159420299" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="163.768115942029" y="2.6785714285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -106,13 +108,6 @@
                                 <rect key="frame" x="16" y="387.5" width="107" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-HH-Zxm">
-                                <rect key="frame" x="142" y="720" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2h 30m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBL-A0-3xm">
@@ -188,10 +183,37 @@
                             <constraint firstItem="wWm-pM-meF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oQC-gw-UyC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JzL-DP-0um"/>
+                    <connections>
+                        <outlet property="ivMovie" destination="wWm-pM-meF" id="2n0-hs-9AK"/>
+                        <outlet property="lbCategories" destination="7zM-At-D5C" id="dYS-se-gES"/>
+                        <outlet property="lbDuration" destination="DBL-A0-3xm" id="fJe-9h-bSr"/>
+                        <outlet property="lbRating" destination="cVp-r6-Tjc" id="WFM-Pa-cQj"/>
+                        <outlet property="lbTitle" destination="tZ0-sz-kwn" id="iLn-9Y-QLu"/>
+                        <outlet property="tvSummary" destination="xiY-46-47O" id="yAt-PK-j1B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="3.2608695652173916"/>
+            <point key="canvasLocation" x="962.31884057971024" y="2.6785714285714284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FUV-If-AKo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WH0-D4-pgS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="SZY-TC-yio">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qaP-V2-Uo5" kind="relationship" relationship="rootViewController" id="L3X-NB-6yi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ii-qe-dUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746.37681159420299" y="2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>
