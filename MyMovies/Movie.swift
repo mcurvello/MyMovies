@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class Movie: Codable {
+    var title: String
+    var categories: String
+    var duration: String
+    var rating: Double
+    var summary: String
+    var image: String
+}
