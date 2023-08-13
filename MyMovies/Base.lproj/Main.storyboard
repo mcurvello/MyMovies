@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -422,7 +423,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ld0-Cn-gDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746" y="727"/>
+            <point key="canvasLocation" x="-1152" y="753"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="NJ5-cH-qXu">
+            <objects>
+                <viewController id="Gei-rf-LBU" customClass="MapViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ucq-61-LRw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWb-zR-8cg">
+                                <rect key="frame" x="0.0" y="104" width="414" height="709"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-G7-9bT">
+                                <rect key="frame" x="0.0" y="48" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Gei-rf-LBU" id="yXG-NA-7jV"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ADA-Bb-PIu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WWb-zR-8cg" firstAttribute="top" secondItem="6IV-G7-9bT" secondAttribute="bottom" id="Azy-R5-3va"/>
+                            <constraint firstItem="6IV-G7-9bT" firstAttribute="top" secondItem="ADA-Bb-PIu" secondAttribute="top" id="Cl4-NK-ckd"/>
+                            <constraint firstItem="6IV-G7-9bT" firstAttribute="leading" secondItem="ADA-Bb-PIu" secondAttribute="leading" id="JoV-YC-oVF"/>
+                            <constraint firstItem="WWb-zR-8cg" firstAttribute="leading" secondItem="ADA-Bb-PIu" secondAttribute="leading" id="bQk-Aw-2a4"/>
+                            <constraint firstItem="6IV-G7-9bT" firstAttribute="trailing" secondItem="ADA-Bb-PIu" secondAttribute="trailing" id="j8X-gs-UMU"/>
+                            <constraint firstItem="ADA-Bb-PIu" firstAttribute="bottom" secondItem="WWb-zR-8cg" secondAttribute="bottom" id="uE4-Qg-U4Q"/>
+                            <constraint firstItem="ADA-Bb-PIu" firstAttribute="trailing" secondItem="WWb-zR-8cg" secondAttribute="trailing" id="w6q-5G-mR9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="map.fill" catalog="system" id="hzB-sa-exk"/>
+                    <connections>
+                        <outlet property="mapView" destination="WWb-zR-8cg" id="mTg-GW-kk1"/>
+                        <outlet property="searchBar" destination="6IV-G7-9bT" id="YCM-NW-wbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aG4-L3-66F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-348" y="753"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h22-1E-kj1">
@@ -437,6 +480,7 @@
                     <connections>
                         <segue destination="WH0-D4-pgS" kind="relationship" relationship="viewControllers" id="8ur-ZX-P0v"/>
                         <segue destination="Vf3-cj-olX" kind="relationship" relationship="viewControllers" id="SWr-U3-Yk4"/>
+                        <segue destination="Gei-rf-LBU" kind="relationship" relationship="viewControllers" id="Zcx-P5-rDH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuJ-MM-Vo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -451,6 +495,7 @@
         <image name="avengers" width="400" height="330"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="play" width="53" height="53"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
