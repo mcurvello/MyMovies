@@ -20,8 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if let movie = movie {
             ivMovie.image = movie.image as? UIImage
             lbTitle.text = movie.title
@@ -32,5 +33,10 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AddEditViewController {
+            vc.movie = movie
+        }
+    }
     
 }

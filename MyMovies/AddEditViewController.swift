@@ -17,6 +17,7 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var tfDuration: UITextField!
     @IBOutlet weak var tvSummary: UITextView!
     @IBOutlet weak var ivMovie: UIImageView!
+    @IBOutlet weak var addEditButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class AddEditViewController: UIViewController {
             tfDuration.text = movie.duration
             tfRating.text = "⭐️ \(movie.rating)/10"
             tvSummary.text = movie.summary
+            
+            addEditButton.setTitle("Alterar", for: .normal)
         }
     }
     
@@ -35,8 +38,8 @@ class AddEditViewController: UIViewController {
         view.endEditing(true)
     }
 
-    @IBAction func addEditMovie(_ sender: UIButton) {
-        
+
+    @IBAction func addEditMovie(_ sender: Any) {
         if movie == nil {
             movie = Movie(context: context)
         }
@@ -56,4 +59,5 @@ class AddEditViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
 }
