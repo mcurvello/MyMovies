@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import AVKit
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
     var trailer: String = ""
     var datePicker = UIDatePicker()
     var alert: UIAlertController!
+    var moviePlayer: AVPlayer?
+    var moviePlayerController: AVPlayerViewController?
     
     @IBOutlet weak var ivMovie: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
@@ -60,6 +63,26 @@ class ViewController: UIViewController {
         
         alert.textFields?.first?.text = dateFormatter.string(from: datePicker.date)
     }
+    
+    func prepareVideo() {
+        
+        guard let url = URL(string: trailer) else {return}
+        
+        moviePlayer = AVPlayer(url: url)
+        moviePlayerController = AVPlayerViewController()
+        
+        moviePlayerController?.player = moviePlayer
+        moviePlayerController?.showsPlaybackControls = true
+    }
+    
+    @IBAction func play(_ sender: Any) {
+        guard let moviePlayerController = moviePlayerController else {return}
+        
+        present(moviePlayerController, animated: true) {
+            self.moviePlayer?.play()
+        }
+    }
+    
     
     @IBAction func scheduleNotifications(_ sender: Any) {
         
@@ -111,6 +134,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 self.trailer = trailer.previewUrl
                 print("URL do Trailer", trailer.previewUrl)
+                self.prepareVideo()
             }
         }
     }
