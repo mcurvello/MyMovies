@@ -34,6 +34,13 @@ class MapViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc = segue.destination as? SiteViewController, let site = sender as? String {
+            vc.site = site
+        }
+    }
 }
 
 extension MapViewController: UISearchBarDelegate {
@@ -77,7 +84,7 @@ extension MapViewController: MKMapViewDelegate {
         
         if let subtitle = annotation.subtitle, let url = subtitle {
             let urlAction = UIAlertAction(title: "Acessar site", style: .default) { (action) in
-                
+                self.performSegue(withIdentifier: "webSegue", sender: url)
             }
             alert.addAction(urlAction)
         }

@@ -22,6 +22,7 @@
 		7FA942052A88604500B4CDCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942042A88604500B4CDCC /* SettingsViewController.swift */; };
 		7FA942072A88639000B4CDCC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942062A88639000B4CDCC /* API.swift */; };
 		7FA942092A89359300B4CDCC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942082A89359300B4CDCC /* MapViewController.swift */; };
+		7FA9420B2A896C5E00B4CDCC /* SiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9420A2A896C5E00B4CDCC /* SiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7FA942042A88604500B4CDCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7FA942062A88639000B4CDCC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7FA942082A89359300B4CDCC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7FA9420A2A896C5E00B4CDCC /* SiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				7FA942042A88604500B4CDCC /* SettingsViewController.swift */,
 				7FA942062A88639000B4CDCC /* API.swift */,
 				7FA942082A89359300B4CDCC /* MapViewController.swift */,
+				7FA9420A2A896C5E00B4CDCC /* SiteViewController.swift */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				7FA942012A88373D00B4CDCC /* UIViewController+CoreData.swift in Sources */,
 				7FA941FD2A87CEA200B4CDCC /* MoviesViewController.swift in Sources */,
 				7FA942052A88604500B4CDCC /* SettingsViewController.swift in Sources */,
+				7FA9420B2A896C5E00B4CDCC /* SiteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

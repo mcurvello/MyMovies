@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="753"/>
+            <point key="canvasLocation" x="2010" y="3"/>
         </scene>
         <!--Add Edit View Controller-->
         <scene sceneID="zXN-UW-STl">
@@ -357,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSg-tg-xK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2112" y="3"/>
+            <point key="canvasLocation" x="1074" y="-725"/>
         </scene>
         <!--Filmes-->
         <scene sceneID="FUV-If-AKo">
@@ -461,11 +461,63 @@
                     <connections>
                         <outlet property="mapView" destination="WWb-zR-8cg" id="mTg-GW-kk1"/>
                         <outlet property="searchBar" destination="6IV-G7-9bT" id="YCM-NW-wbP"/>
+                        <segue destination="o0X-Zq-GKM" kind="presentation" identifier="webSegue" id="a5X-ee-Loc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG4-L3-66F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-348" y="753"/>
+        </scene>
+        <!--Site View Controller-->
+        <scene sceneID="D1K-Ae-5qB">
+            <objects>
+                <viewController id="o0X-Zq-GKM" customClass="SiteViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WtJ-V2-2MN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQR-Mc-074">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                            </navigationBar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-aA-CgE">
+                                <rect key="frame" x="0.0" y="53" width="414" height="833"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyF-HY-bYN">
+                                <rect key="frame" x="16" y="25" width="76.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fechar"/>
+                                <connections>
+                                    <action selector="close:" destination="o0X-Zq-GKM" eventType="touchUpInside" id="wyL-hH-2TI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f6V-9o-hxq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oNZ-aA-CgE" firstAttribute="top" secondItem="zyF-HY-bYN" secondAttribute="bottom" constant="-7" id="0SZ-5n-S7S"/>
+                            <constraint firstItem="VQR-Mc-074" firstAttribute="leading" secondItem="f6V-9o-hxq" secondAttribute="leading" id="5Vb-3c-fgc"/>
+                            <constraint firstItem="oNZ-aA-CgE" firstAttribute="leading" secondItem="f6V-9o-hxq" secondAttribute="leading" id="7XJ-5Y-7qK"/>
+                            <constraint firstItem="f6V-9o-hxq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zyF-HY-bYN" secondAttribute="trailing" symbolic="YES" id="9AE-El-0aJ"/>
+                            <constraint firstItem="VQR-Mc-074" firstAttribute="trailing" secondItem="f6V-9o-hxq" secondAttribute="trailing" id="9eY-O5-fYN"/>
+                            <constraint firstItem="f6V-9o-hxq" firstAttribute="bottom" secondItem="oNZ-aA-CgE" secondAttribute="bottom" id="Jkf-FE-zKq"/>
+                            <constraint firstItem="VQR-Mc-074" firstAttribute="top" secondItem="f6V-9o-hxq" secondAttribute="top" constant="20" id="N6U-wu-l6E"/>
+                            <constraint firstItem="zyF-HY-bYN" firstAttribute="top" secondItem="VQR-Mc-074" secondAttribute="bottom" constant="-39" id="Nec-DK-G5b"/>
+                            <constraint firstItem="zyF-HY-bYN" firstAttribute="leading" secondItem="f6V-9o-hxq" secondAttribute="leading" constant="16" id="mtL-MA-VyC"/>
+                            <constraint firstItem="f6V-9o-hxq" firstAttribute="trailing" secondItem="oNZ-aA-CgE" secondAttribute="trailing" id="v9Q-jo-scz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="oNZ-aA-CgE" id="c5r-kO-Itw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIW-Hv-pKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.63768115942031" y="752.67857142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h22-1E-kj1">
