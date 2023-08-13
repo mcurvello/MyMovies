@@ -165,6 +165,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="play"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoD-bC-TLt">
+                                <rect key="frame" x="264" y="489" width="150" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Adicionar Lembrete">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="scheduleNotifications:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpg-eX-bcc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,7 +184,9 @@
                             <constraint firstItem="7zM-At-D5C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4WL-Oc-uOQ"/>
                             <constraint firstAttribute="bottom" secondItem="0or-jz-oVg" secondAttribute="bottom" id="50O-rT-yXN"/>
                             <constraint firstItem="tZ0-sz-kwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="9Et-0u-gUi"/>
+                            <constraint firstItem="EoD-bC-TLt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DL4-Uf-RZJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tZ0-sz-kwn" secondAttribute="trailing" constant="20" id="HeX-gE-gGX"/>
+                            <constraint firstItem="EoD-bC-TLt" firstAttribute="top" secondItem="DBL-A0-3xm" secondAttribute="bottom" constant="0.5" id="PLC-cU-m9v"/>
                             <constraint firstItem="tZ0-sz-kwn" firstAttribute="top" secondItem="wWm-pM-meF" secondAttribute="bottom" constant="8" id="SBT-5w-O5x"/>
                             <constraint firstItem="0or-jz-oVg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T7w-9D-B0H"/>
                             <constraint firstItem="0bT-cp-P6Y" firstAttribute="centerY" secondItem="wWm-pM-meF" secondAttribute="centerY" constant="0.5" id="VKA-l3-hvo"/>
@@ -209,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872.4637681159422" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="2154" y="415"/>
         </scene>
         <!--Add Edit View Controller-->
         <scene sceneID="zXN-UW-STl">
@@ -340,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSg-tg-xK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163.768115942029" y="-686.38392857142856"/>
+            <point key="canvasLocation" x="3213" y="3"/>
         </scene>
         <!--Filmes-->
         <scene sceneID="FUV-If-AKo">
