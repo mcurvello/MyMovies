@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -85,7 +86,21 @@ class ViewController: UIViewController {
     }
     
     func schedule() {
-        print("Usuário agendou o lembrete")
+        
+        let content = UNMutableNotificationContent()
+        
+        content.title = "Lembrete"
+        
+        let movieTitle = movie?.title ?? ""
+        content.body = "Assistir filme \"\(movieTitle)\""
+        
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: datePicker.date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "Lembrete", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
     }
     
     func loadTrailers(title: String) {
