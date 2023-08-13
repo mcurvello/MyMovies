@@ -20,6 +20,7 @@
 		7FA942012A88373D00B4CDCC /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942002A88373D00B4CDCC /* UIViewController+CoreData.swift */; };
 		7FA942032A8848EE00B4CDCC /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942022A8848EE00B4CDCC /* AddEditViewController.swift */; };
 		7FA942052A88604500B4CDCC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942042A88604500B4CDCC /* SettingsViewController.swift */; };
+		7FA942072A88639000B4CDCC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA942062A88639000B4CDCC /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7FA942002A88373D00B4CDCC /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		7FA942022A8848EE00B4CDCC /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		7FA942042A88604500B4CDCC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7FA942062A88639000B4CDCC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				7FA942002A88373D00B4CDCC /* UIViewController+CoreData.swift */,
 				7FA942022A8848EE00B4CDCC /* AddEditViewController.swift */,
 				7FA942042A88604500B4CDCC /* SettingsViewController.swift */,
+				7FA942062A88639000B4CDCC /* API.swift */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				7FA941E22A86DF6B00B4CDCC /* AppDelegate.swift in Sources */,
 				7FA941FF2A87DD3500B4CDCC /* MovieTableViewCell.swift in Sources */,
 				7FA941EC2A86DF6B00B4CDCC /* MyMovies.xcdatamodeld in Sources */,
+				7FA942072A88639000B4CDCC /* API.swift in Sources */,
 				7FA942032A8848EE00B4CDCC /* AddEditViewController.swift in Sources */,
 				7FA941E42A86DF6B00B4CDCC /* SceneDelegate.swift in Sources */,
 				7FA942012A88373D00B4CDCC /* UIViewController+CoreData.swift in Sources */,
